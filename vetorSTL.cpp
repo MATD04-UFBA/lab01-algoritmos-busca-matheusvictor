@@ -11,20 +11,20 @@
 // ********************************************************************
 int main() {
 
-std::vector<int> v;
+std::vector<int> v(MAX); // Инициализируем вектор с желаемым размером
 
-	std::cout << "tamanho do vetor = " << v.size() << std::endl;
+    std::cout << "размер вектора = " << v.size() << std::endl;
 
-    srand( time(NULL) );
+    srand(time(NULL));
 
-    for (unsigned int i=0 ; i < MAX ; i++) 
-        v.push_back(i);
-        
-    std::cout << "conteudo de v: \n [\b\b ";
+    for (unsigned int i = 0; i < MAX; i++) 
+        v[i] = i;
 
-    for (unsigned int i = 0 ; i < MAX ; i++) 
-       std::cout << v[i] << " , ";
+    std::cout << "содержимое v: \n [ ";
+
+    for (unsigned int i = 0; i < MAX; i++) 
+        std::cout << v[i] << " , ";
 
     std::cout << "\b\b] \n";
- 	return 0;        
+    return 0;                
 }
